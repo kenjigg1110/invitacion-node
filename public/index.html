@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tengo una pregunta para ti</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+
+    <!-- Pantalla 1: la pregunta -->
+    <section id="pantalla-pregunta" class="pantalla">
+      <p class="emoji-grande" aria-hidden="true">💌</p>
+      <h1 id="titulo">¿Quieres salir conmigo?</h1>
+      <p class="pista" id="pista">Piénsalo con calma. Pero no mucho.</p>
+      <div class="acciones">
+        <button id="btn-si" class="boton boton-si" type="button">Sí</button>
+        <!-- El hueco conserva el espacio cuando el botón "No" empieza a huir -->
+        <span id="hueco"><button id="btn-no" class="boton boton-no" type="button">No</button></span>
+      </div>
+    </section>
+
+    <!-- Pantalla 2: elegir la cita -->
+    <section id="pantalla-citas" class="pantalla" hidden>
+      <p class="emoji-grande" aria-hidden="true">🎉</p>
+      <h1>Perfecto. ¿Qué se te antoja?</h1>
+      <p class="pista">Elige una opción y yo me encargo del resto.</p>
+      <div class="opciones">
+        <button class="opcion" type="button" data-opcion="alitas"><span aria-hidden="true">🍗</span>Alitas de pollo</button>
+        <button class="opcion" type="button" data-opcion="miche"><span aria-hidden="true">🍺</span>Miche</button>
+        <button class="opcion" type="button" data-opcion="chaska"><span aria-hidden="true">🥤</span>Chaska</button>
+        <button class="opcion" type="button" data-opcion="cafe"><span aria-hidden="true">☕</span>Café</button>
+      </div>
+    </section>
+
+    <!-- Pantalla 3: confirmación -->
+    <section id="pantalla-final" class="pantalla" hidden>
+      <p class="emoji-grande" aria-hidden="true">✨</p>
+      <h1>Hecho</h1>
+      <p class="pista" id="mensaje-final"></p>
+    </section>
+
+  </main>
+
+  <!-- Aviso accesible para lectores de pantalla y errores de red -->
+  <p id="estado" class="estado" role="status" aria-live="polite"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>

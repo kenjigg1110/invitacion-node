@@ -1,0 +1,20 @@
+{
+  "name": "invitacion-node",
+  "version": "1.0.0",
+  "description": "Página interactiva para invitar a salir: botón \"No\" que escapa del puntero y notificaciones push al celular con la elección de la cita.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "probar": "node scripts/probar-notificacion.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["nodejs", "express", "ntfy", "notificaciones", "juego"],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
